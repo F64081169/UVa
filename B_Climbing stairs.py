@@ -7,8 +7,11 @@ def stairs():
 if __name__ == '__main__':
     stairs()
     while True:
-        n = int(input())
-        print(stair[n])
+        try:
+            n = int(input())
+            print(stair[n])
+        except EOFError:
+            break
 
 ```
 因為測資介於1-100會overflow，建議用python 寫大數的題目，為什麼我考試的時候那麼笨哈
